@@ -1,0 +1,39 @@
+package:
+     name: nomnom
+     version: "0.1.0"
+
+   source:
+     url: https://github.com/diegomics/NomNom/archive/refs/tags/v0.1.0.tar.gz
+     sha256: 0ac1f0f44a323ae7985d5075c4b5755034b8bf066e3dac6e607228075596cc8c
+
+   build:
+     noarch: python
+     number: 0
+     script: python -m pip install . --no-deps --no-build-isolation -vvv
+     entry_points:
+       - nomnom = NomNom:main
+
+   requirements:
+     host:
+       - python >=3.11
+       - pip
+       - setuptools
+     run:
+       - python >=3.11
+       - pandas >=2.3
+       - numpy >=2.3
+       - openpyxl >=3.1
+       - xlrd >=2.0
+       - numbers-parser >=4.16
+       - odfpy >=1.4
+       - pyyaml >=6.0
+
+   test:
+     commands:
+       - nomnom --help
+
+   about:
+     home: https://github.com/diegomics/NomNom
+     license: MIT
+     license_family: MIT
+     summary: A tool for converting genomic data tables into hierarchical YAML files
