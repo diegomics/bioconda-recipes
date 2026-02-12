@@ -12,6 +12,8 @@ build:
   script: python -m pip install . --no-deps --no-build-isolation -vvv
   entry_points:
     - nomnom = NomNom:main
+  run_exports:
+    - {{ pin_subpackage("nomnom", max_pin=None) }}
 
 requirements:
   host:
