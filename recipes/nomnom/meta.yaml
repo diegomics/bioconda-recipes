@@ -1,10 +1,14 @@
+{% set name = "nomnom" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "0ac1f0f44a323ae7985d5075c4b5755034b8bf066e3dac6e607228075596cc8c" %}
+
 package:
-  name: nomnom
-  version: "0.1.0"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  url: https://github.com/diegomics/NomNom/archive/refs/tags/v0.1.0.tar.gz
-  sha256: 0ac1f0f44a323ae7985d5075c4b5755034b8bf066e3dac6e607228075596cc8c
+  url: https://github.com/diegomics/NomNom/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
