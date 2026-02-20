@@ -14,8 +14,6 @@ build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vvv
-  entry_points:
-    - nomnom = NomNom:main
   run_exports:
     - {{ pin_subpackage("nomnom", max_pin="x.x") }}
 
