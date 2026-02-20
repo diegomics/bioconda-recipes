@@ -42,4 +42,5 @@ about:
   home: https://github.com/diegomics/NomNom
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: A tool for converting genomic data tables into hierarchical YAML files
